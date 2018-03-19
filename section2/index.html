@@ -6,12 +6,19 @@
   </head>
   <body>
     <div id="app"> <!-- this is all under control of VueJS -->
-      <input type="text" v-on:input="changeTitle"> <!-- uses v-on directive and :input argument
+      <input v-on:input="changeTitle"> <!-- uses v-on directive and :input argument
         and calls a method "changeTitle" -->
-      <p>{{ title }}</p>
-      <p>{{ sayHello() }}</p>
+      <p v-once>{{ title }}</p> <!-- sticks to the initial value -->
+      <p v-once>{{ sayHello() }}</p>
       <a v-bind:href="link">Google</a> <!-- directives (v-bind) binding attributes (href) -->
       <!-- pass arguments to directives by : -->
+      <p>{{ newHello() }}</p>
+      <hr>
+      <p v-html="finishedLink"></p> <!-- outputing HTML  via Vue.JS -->
+      <hr>
+      <button v-on:click="increase">Click me</button>
+      <p> {{ counter }} </p>
+      <p v-on:mousemove="updateCoordinates">Coordinate: {{ x }} / {{ y }}</p>
     </div>
     <script src="./main.js"></script>
   </body>

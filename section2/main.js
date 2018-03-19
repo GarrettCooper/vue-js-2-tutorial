@@ -11,7 +11,11 @@ new Vue({
   data:{
     title: 'Hello World!',
     title2: 'Goodbye World!',
-    link: 'http://google.com'
+    link: 'http://google.com',
+    finishedLink: '<a href="http://google.com">Google</a>',
+    counter: 0,
+    x: 0,
+    y: 0
   },
   methods: {
     changeTitle: function(event) { // default 'event' object created by javascript
@@ -22,6 +26,18 @@ new Vue({
     sayHello: function(){
       //return 'Hello';
       return this.title2;
+    },
+    newHello: function(){
+      //return 'Hello';
+      this.title = "NEW Hello World!";
+      return this.title;
+    },
+    increase: function() {
+      return this.counter++;
+    },
+    updateCoordinates: function(event) {
+      this.x = event.clientX;
+      this.y = event.clientY;
     }
   }
 });

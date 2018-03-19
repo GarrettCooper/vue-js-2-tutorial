@@ -11,4 +11,8 @@ Go to installation page: https://vuejs.org/v2/guide/installation.html
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 ```
 
-## Section 2: Interact with the DOM
+## Section 2: Interacting with the DOM
+String interpolation:
+```
+<p>{{ title }}</p>
+```
