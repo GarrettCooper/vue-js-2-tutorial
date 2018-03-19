@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue.JS Section 1</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script> <!-- import VueJS -->
+  </head>
+  <body>
+    <div id="app"> <!-- this is all under control of VueJS -->
+      <input type="text" v-on:input="changeTitle"> <!-- uses v-on directive and :input argument
+        and calls a method "changeTitle" -->
+      <p>{{ title }}</p>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
