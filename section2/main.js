@@ -32,12 +32,15 @@ new Vue({
       this.title = "NEW Hello World!";
       return this.title;
     },
-    increase: function() {
-      return this.counter++;
+    increase: function(step, event) {
+      return this.counter += step;
     },
     updateCoordinates: function(event) {
       this.x = event.clientX;
       this.y = event.clientY;
+    },
+    alertMe: function(){
+      alert('Alert!');
     }
   }
 });
